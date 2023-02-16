@@ -1,14 +1,16 @@
 import React from "react";
 import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 import { Link } from "gatsby";
 
 function ProjectsPage() {
     return (
-        <div className="container">
-            <p>Projects</p>
-            <Link to="/">Go Home</Link>
-        </div>
+        <Layout pageTitle="Projects">
+            <p>This is the projects page</p>
+        </Layout>
     );
 }
+
+export const Head = () => <Seo title="Projects" />;
 
 export default ProjectsPage;

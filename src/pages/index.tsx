@@ -1,5 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
 const IndexPage: any = () => {
     return (
@@ -9,6 +10,6 @@ const IndexPage: any = () => {
     );
 };
 
-export default IndexPage;
+export const Head = () => <Seo title="Home Page" />;
 
-export const Head: any = () => <title>Home Page</title>;
+export default IndexPage;

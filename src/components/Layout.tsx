@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 interface IProps {
     pageTitle: string;
-    children: any;
+    children: React.ReactNode;
 }
 
 function Layout({ pageTitle, children }: IProps) {
@@ -11,8 +11,12 @@ function Layout({ pageTitle, children }: IProps) {
         <div className="container">
             <header>
                 <h1>Luka Velic</h1>
+                <h2>{pageTitle}</h2>
                 <nav>
                     <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
                         <li>
                             <Link to="/projects">Projects</Link>
                         </li>
