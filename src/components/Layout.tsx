@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 interface IProps {
     pageTitle: string;
@@ -7,10 +7,20 @@ interface IProps {
 }
 
 function Layout({ pageTitle, children }: IProps) {
+    const data = useStaticQuery(graphql`
+        query MyQuery {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `);
+
     return (
         <div className="container">
             <header>
-                <h1>Luka Velic</h1>
+                <h1>{data.site.siteMetadata.title}</h1>
                 <h2>{pageTitle}</h2>
                 <nav>
                     <ul>
