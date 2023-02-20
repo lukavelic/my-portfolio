@@ -1,11 +1,12 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage: any = () => {
     return (
         <Layout pageTitle="Home">
-            <p>This is a test</p>
+            <div></div>
         </Layout>
     );
 };
