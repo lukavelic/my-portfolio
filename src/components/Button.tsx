@@ -1,15 +1,22 @@
 import React from "react";
 
-function Button(props: any) {
+interface IProps {
+    className?: string;
+    text?: string;
+    children?: JSX.Element;
+}
+
+function Button({ className, text, children }: IProps) {
     return (
         <div
             className={
-                props.className +
+                className +
                 " " +
-                "w-fit rounded-lg border px-2 py-1 text-white"
+                "flex w-fit items-center gap-1 rounded-lg border px-2 py-1 text-white"
             }
         >
-            <p>{props.text}</p>
+            {children}
+            <p>{text}</p>
         </div>
     );
 }
