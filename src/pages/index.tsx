@@ -17,15 +17,15 @@ import image9 from "../images/image1.jpg";
 
 const IndexPage: any = () => {
     const images = [
-        image1,
-        image2,
-        image3,
-        image4,
-        image5,
-        image6,
-        image7,
-        image8,
-        image9,
+        { img: image1, url: "/about" },
+        { img: image2, url: "/" },
+        { img: image3, url: "/" },
+        { img: image4, url: "/" },
+        { img: image5, url: "/" },
+        { img: image6, url: "/" },
+        { img: image7, url: "/" },
+        { img: image8, url: "/" },
+        { img: image9, url: "/" },
     ];
 
     return (
