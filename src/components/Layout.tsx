@@ -4,10 +4,11 @@ import Button from "./Button";
 
 interface IProps {
     pageTitle: string;
+    contactClickHandler: Function;
     children: React.ReactNode;
 }
 
-function Layout({ pageTitle, children }: IProps) {
+function Layout({ pageTitle, contactClickHandler, children }: IProps) {
     const data = useStaticQuery(graphql`
         query MyQuery {
             site {
@@ -17,6 +18,10 @@ function Layout({ pageTitle, children }: IProps) {
             }
         }
     `);
+
+    const contactClickHandlerRef = () => {
+        contactClickHandler();
+    };
 
     return (
         <div className="h-auto min-h-screen bg-zinc-900 py-8 px-8 font-roboto md:px-16">
@@ -118,7 +123,7 @@ function Layout({ pageTitle, children }: IProps) {
                         </svg>
                         <span>React</span>
                     </Button>
-                    <div>
+                    <div onClick={contactClickHandlerRef}>
                         <Button className="border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

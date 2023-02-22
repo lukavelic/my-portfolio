@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Section from "../components/Section";
@@ -19,6 +19,7 @@ import image9 from "../images/image1.jpg";
 const IndexPage: any = () => {
     const [opacityEmail, setOpacityEmail] = useState("opacity-100");
     const [opacityClipboard, setOpacityClipboard] = useState("opacity-0");
+    const emailRef = useRef<HTMLDivElement>(null);
 
     const images = [
         { img: image1, url: "/about" },
@@ -43,8 +44,18 @@ const IndexPage: any = () => {
         }, 2000);
     };
 
+    const contactClickHandler = () => {
+        if (emailRef.current) {
+            emailRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+                inline: "nearest",
+            });
+        }
+    };
+
     return (
-        <Layout pageTitle="Home">
+        <Layout pageTitle="Home" contactClickHandler={contactClickHandler}>
             <p className="max-w-xl text-justify">
                 A mariner turned front-end web developer. Whether it's designing
                 an engaging user interface or optimizing website performance, I
@@ -72,7 +83,7 @@ const IndexPage: any = () => {
             </Section>
             <Section>
                 <p className="mt-6 text-5xl text-white">Let's get in touch!</p>
-                <div onClick={emailClickHandler}>
+                <div onClick={emailClickHandler} ref={emailRef}>
                     <Button className="relative mt-6 border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
