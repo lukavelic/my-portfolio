@@ -56,7 +56,7 @@ const IndexPage: any = () => {
 
     return (
         <Layout pageTitle="Home" contactClickHandler={contactClickHandler}>
-            <p className="max-w-xl text-justify">
+            <p className="max-w-xl text-justify text-gray-400">
                 A mariner turned front-end web developer. Whether it's designing
                 an engaging user interface or optimizing website performance, I
                 take pride in delivering high-quality work that meets the needs
@@ -66,9 +66,9 @@ const IndexPage: any = () => {
                 <Button className="border-blue-600 bg-blue-600">
                     <span>Projects</span>
                 </Button>
-                <div className="flex w-full flex-col justify-center pt-8">
+                <div className="flex w-full flex-col justify-center">
                     <MobileCollage
-                        className="flex flex-col gap-4"
+                        className="mt-6 flex flex-col gap-4"
                         images={images}
                     ></MobileCollage>
                     <Carousel scroll="left" images={images}></Carousel>
@@ -82,7 +82,7 @@ const IndexPage: any = () => {
                 <p className="mt-6">Test</p>
             </Section>
             <Section>
-                <p className="mt-6 text-5xl text-white">Let's get in touch!</p>
+                <p className="text-5xl text-white">Let's get in touch!</p>
                 <div onClick={emailClickHandler} ref={emailRef}>
                     <Button className="relative mt-6 border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
                         <svg
