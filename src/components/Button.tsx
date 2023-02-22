@@ -2,11 +2,10 @@ import React from "react";
 
 interface IProps {
     className?: string;
-    text?: string;
-    children?: JSX.Element;
+    children?: any;
 }
 
-function Button({ className, text, children }: IProps) {
+function Button({ className, children }: IProps) {
     return (
         <div
             className={
@@ -16,7 +15,6 @@ function Button({ className, text, children }: IProps) {
             }
         >
             {children}
-            <p>{text}</p>
         </div>
     );
 }

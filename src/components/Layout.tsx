@@ -42,7 +42,7 @@ function Layout({ pageTitle, children }: IProps) {
                     <p className=" text-5xl  font-medium">Luka Velic</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                    <Button text="HTML" className="">
+                    <Button className="">
                         <svg
                             className="h-4"
                             xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +65,9 @@ function Layout({ pageTitle, children }: IProps) {
                                 d="M255 208v57h70l-7 73-63 17v59l116-32 1-10 13-149 2-15h-16zm0-114v56h137l1-12 3-29 1-15z"
                             />
                         </svg>
+                        <span>HTML</span>
                     </Button>
-                    <Button text="CSS">
+                    <Button>
                         <svg
                             className="h-4 w-4"
                             viewBox="0 0 60 60"
@@ -89,8 +90,9 @@ function Layout({ pageTitle, children }: IProps) {
                                 d="m40.691 33.138-.82 9.163-7.88 2.126v7.35l14.484-4.014.106-1.193 1.66-18.6.172-1.896 1.276-14.3H31.992v7.065h9.954l-.642 7.235h-9.312v7.064z"
                             />
                         </svg>
+                        <span>CSS</span>
                     </Button>
-                    <Button text="JavaScript">
+                    <Button>
                         <svg
                             className="h-4 w-4"
                             xmlns="http://www.w3.org/2000/svg"
@@ -99,8 +101,9 @@ function Layout({ pageTitle, children }: IProps) {
                             <path fill="#f7df1e" d="M0 0h630v630H0z" />
                             <path d="M423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" />
                         </svg>
+                        <span>JavaScript</span>
                     </Button>
-                    <Button text="React">
+                    <Button>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="-11.5 -10.232 23 20.463"
@@ -121,11 +124,9 @@ function Layout({ pageTitle, children }: IProps) {
                                 />
                             </g>
                         </svg>
+                        <span>React</span>
                     </Button>
-                    <Button
-                        text="Contact"
-                        className="border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent"
-                    >
+                    <Button className="border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -140,6 +141,7 @@ function Layout({ pageTitle, children }: IProps) {
                                 d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                             />
                         </svg>
+                        <span>Contact</span>
                     </Button>
                 </div>
             </header>
