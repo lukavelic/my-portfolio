@@ -1,6 +1,5 @@
 import * as React from "react";
-import { useRef, useState } from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import Button from "./Button";
 
 interface IProps {
@@ -9,8 +8,6 @@ interface IProps {
 }
 
 function Layout({ pageTitle, children }: IProps) {
-    const [isNavHidden, setIsNavHidden] = useState(true);
-
     const data = useStaticQuery(graphql`
         query MyQuery {
             site {
@@ -20,11 +17,6 @@ function Layout({ pageTitle, children }: IProps) {
             }
         }
     `);
-
-    const navLinks = useRef(null);
-
-    const clickHandler = (e: React.MouseEvent) =>
-        isNavHidden ? setIsNavHidden(false) : setIsNavHidden(true);
 
     return (
         <div className="h-auto min-h-screen bg-zinc-900 py-8 px-8 font-roboto md:px-16">
@@ -126,23 +118,25 @@ function Layout({ pageTitle, children }: IProps) {
                         </svg>
                         <span>React</span>
                     </Button>
-                    <Button className="border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="h-4 w-4"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                            />
-                        </svg>
-                        <span>Contact</span>
-                    </Button>
+                    <div>
+                        <Button className="border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                className="h-4 w-4"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                                />
+                            </svg>
+                            <span>Contact</span>
+                        </Button>
+                    </div>
                 </div>
             </header>
             <main className=" text-gray-400">{children}</main>
