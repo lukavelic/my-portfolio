@@ -9,7 +9,7 @@ function MobileCollage({ className, images }: any) {
         <div className={className + " " + "flex gap-8 md:hidden"}>
             {slicedImages().map((obj: any) => {
                 return (
-                    <Link to={obj.url} className="w-full">
+                    <Link to={obj.url} className="w-full" key={obj.id}>
                         <img src={obj.img} className="w-full rounded-lg"></img>
                     </Link>
                 );

@@ -24,6 +24,7 @@ function Carousel({ scroll, images }: any) {
                     <div
                         id="slide"
                         className="relative flex w-80 items-center rounded-lg"
+                        key={obj.id}
                     >
                         <Link
                             to={obj.url}
@@ -34,13 +35,13 @@ function Carousel({ scroll, images }: any) {
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1.5"
+                                    strokeWidth="1.5"
                                     stroke="currentColor"
                                     className="h-6 w-6 text-white"
                                 >
                                     <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                         d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                                     />
                                 </svg>
@@ -56,6 +57,7 @@ function Carousel({ scroll, images }: any) {
                     <div
                         id="slide"
                         className="relative flex w-80 items-center rounded-lg"
+                        key={obj.id}
                     >
                         <Link
                             to={obj.url}
@@ -66,13 +68,13 @@ function Carousel({ scroll, images }: any) {
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1.5"
+                                    strokeWidth="1.5"
                                     stroke="currentColor"
                                     className="h-6 w-6 text-white"
                                 >
                                     <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                         d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                                     />
                                 </svg>

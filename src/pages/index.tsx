@@ -22,15 +22,15 @@ const IndexPage: any = () => {
     const emailRef = useRef<HTMLDivElement>(null);
 
     const images = [
-        { img: image1, url: "/about" },
-        { img: image2, url: "/" },
-        { img: image3, url: "/" },
-        { img: image4, url: "/" },
-        { img: image5, url: "/" },
-        { img: image6, url: "/" },
-        { img: image7, url: "/" },
-        { img: image8, url: "/" },
-        { img: image9, url: "/" },
+        { id: 0, img: image1, url: "/about" },
+        { id: 1, img: image2, url: "/" },
+        { id: 2, img: image3, url: "/" },
+        { id: 3, img: image4, url: "/" },
+        { id: 4, img: image5, url: "/" },
+        { id: 5, img: image6, url: "/" },
+        { id: 6, img: image7, url: "/" },
+        { id: 7, img: image8, url: "/" },
+        { id: 8, img: image9, url: "/" },
     ];
 
     const emailClickHandler = () => {
