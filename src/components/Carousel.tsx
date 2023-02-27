@@ -50,7 +50,8 @@ function Carousel({ scroll, images }: any) {
                         </Link>
                         <img
                             src={obj.img}
-                            className="rounded-lg transition-all "
+                            className="rounded-lg transition-all"
+                            alt={obj.alt}
                         />
                     </div>
                 ))}
@@ -83,7 +84,8 @@ function Carousel({ scroll, images }: any) {
                         </Link>
                         <img
                             src={obj.img}
-                            className="rounded-lg transition-all "
+                            className="rounded-lg transition-all"
+                            alt={obj.alt}
                         />
                     </div>
                 ))}

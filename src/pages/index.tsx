@@ -18,10 +18,10 @@ const IndexPage: any = () => {
     const emailRef = useRef<HTMLDivElement>(null);
 
     const images = [
-        { id: 0, img: img1, url: "/" },
-        { id: 1, img: img2, url: "/" },
-        { id: 2, img: img3, url: "/" },
-        { id: 3, img: img4, url: "/" },
+        { id: 0, img: img1, url: "/", alt: "" },
+        { id: 1, img: img2, url: "/", alt: "" },
+        { id: 2, img: img3, url: "/", alt: "" },
+        { id: 3, img: img4, url: "/", alt: "" },
     ];
 
     const emailClickHandler = () => {
@@ -75,7 +75,7 @@ const IndexPage: any = () => {
                     <Button className="border-teal-600 bg-teal-600">
                         <span>About</span>
                     </Button>
-                    <p className="mt-6">Test</p>
+                    <div></div>
                 </PopAnimation>
             </Section>
             <Section>
