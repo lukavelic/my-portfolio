@@ -17,14 +17,14 @@ function Carousel({ scroll, images }: any) {
             <div
                 className={
                     scroll === "left"
-                        ? "hover:paused flex w-[calc(20rem*8)] animate-scrollLeft gap-6"
-                        : "hover:paused flex w-[calc(20rem*8)] animate-scrollRight gap-6"
+                        ? "hover:paused flex w-[calc(30rem*8)] animate-scrollLeft gap-6"
+                        : "hover:paused flex w-[calc(30rem*8)] animate-scrollRight gap-6"
                 }
             >
                 {images.map((obj: any) => (
                     <div
                         id="slide"
-                        className="relative flex w-80 items-center rounded-lg"
+                        className="relative flex w-[30rem] items-center rounded-lg"
                         key={obj.id}
                     >
                         <Link
@@ -57,7 +57,7 @@ function Carousel({ scroll, images }: any) {
                 {images.map((obj: any) => (
                     <div
                         id="slide"
-                        className="relative flex w-80 items-center rounded-lg"
+                        className="relative flex w-[30rem] items-center rounded-lg"
                         key={obj.id}
                     >
                         <Link
