@@ -9,17 +9,17 @@ module.exports = {
     theme: {
         extend: {
             animation: {
-                scrollLeft: "scrollLeft 60s linear infinite",
-                scrollRight: "scrollRight 60s linear infinite",
+                scrollLeft: "scrollLeft 30s linear infinite",
+                scrollRight: "scrollRight 30s linear infinite",
             },
             keyframes: {
                 scrollLeft: {
                     "0%": { transform: "translateX(0)" },
-                    "100%": { transform: "translateX(calc(-250px * 9))" },
+                    "100%": { transform: "translateX(calc(-20rem * 4))" },
                 },
                 scrollRight: {
                     "0%": { transform: "translateX(0)" },
-                    "100%": { transform: "translateX(calc(250px * 9))" },
+                    "100%": { transform: "translateX(calc(20rem * 4))" },
                 },
             },
         },

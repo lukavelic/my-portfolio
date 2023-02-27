@@ -13,11 +13,12 @@ function Carousel({ scroll, images }: any) {
                 " relative m-auto mt-6 grid h-auto w-full place-items-center overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[15%] before:bg-gradient-to-l before:from-transparent before:to-zinc-900 after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[15%] after:bg-gradient-to-r after:from-transparent after:to-zinc-900 max-md:hidden"
             }
         >
+            {/* w- multiplied by no. of images */}
             <div
                 className={
                     scroll === "left"
-                        ? "hover:paused flex w-[calc(20rem*18)] animate-scrollLeft gap-6"
-                        : "hover:paused flex w-[calc(20rem*18)] animate-scrollRight gap-6"
+                        ? "hover:paused flex w-[calc(20rem*8)] animate-scrollLeft gap-6"
+                        : "hover:paused flex w-[calc(20rem*8)] animate-scrollRight gap-6"
                 }
             >
                 {images.map((obj: any) => (

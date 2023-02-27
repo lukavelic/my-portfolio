@@ -7,15 +7,10 @@ import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import MobileCollage from "../components/MobileCollage";
 import PopAnimation from "../components/PopAnimation";
-import image1 from "../images/image1.jpg";
-import image2 from "../images/image1.jpg";
-import image3 from "../images/image1.jpg";
-import image4 from "../images/image1.jpg";
-import image5 from "../images/image1.jpg";
-import image6 from "../images/image1.jpg";
-import image7 from "../images/image1.jpg";
-import image8 from "../images/image1.jpg";
-import image9 from "../images/image1.jpg";
+import img1 from "../images/img1.webp";
+import img2 from "../images/img2.webp";
+import img3 from "../images/img3.webp";
+import img4 from "../images/img4.webp";
 
 const IndexPage: any = () => {
     const [opacityEmail, setOpacityEmail] = useState("opacity-100");
@@ -23,15 +18,10 @@ const IndexPage: any = () => {
     const emailRef = useRef<HTMLDivElement>(null);
 
     const images = [
-        { id: 0, img: image1, url: "/about" },
-        { id: 1, img: image2, url: "/" },
-        { id: 2, img: image3, url: "/" },
-        { id: 3, img: image4, url: "/" },
-        { id: 4, img: image5, url: "/" },
-        { id: 5, img: image6, url: "/" },
-        { id: 6, img: image7, url: "/" },
-        { id: 7, img: image8, url: "/" },
-        { id: 8, img: image9, url: "/" },
+        { id: 0, img: img1, url: "/" },
+        { id: 1, img: img2, url: "/" },
+        { id: 2, img: img3, url: "/" },
+        { id: 3, img: img4, url: "/" },
     ];
 
     const emailClickHandler = () => {
