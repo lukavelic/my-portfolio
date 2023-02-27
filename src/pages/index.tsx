@@ -6,6 +6,7 @@ import Section from "../components/Section";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import MobileCollage from "../components/MobileCollage";
+import PopAnimation from "../components/PopAnimation";
 import image1 from "../images/image1.jpg";
 import image2 from "../images/image1.jpg";
 import image3 from "../images/image1.jpg";
@@ -56,63 +57,75 @@ const IndexPage: any = () => {
 
     return (
         <Layout pageTitle="Home" contactClickHandler={contactClickHandler}>
-            <p className="max-w-xl text-justify text-gray-400">
-                A mariner turned front-end web developer. Whether it's designing
-                an engaging user interface or optimizing website performance, I
-                take pride in delivering high-quality work that meets the needs
-                of both clients and end-users.
-            </p>
+            <PopAnimation>
+                <p className="max-w-xl text-justify text-gray-400">
+                    A mariner turned front-end web developer. Whether it's
+                    designing an engaging user interface or optimizing website
+                    performance, I take pride in delivering high-quality work
+                    that meets the needs of both clients and end-users.
+                </p>
+            </PopAnimation>
             <Section>
-                <Button className="border-blue-600 bg-blue-600">
-                    <span>Projects</span>
-                </Button>
-                <div className="flex w-full flex-col justify-center">
-                    <MobileCollage
-                        className="mt-6 flex flex-col gap-4"
-                        images={images}
-                    ></MobileCollage>
-                    <Carousel scroll="left" images={images}></Carousel>
-                    <Carousel scroll="right" images={images}></Carousel>
-                </div>
-            </Section>
-            <Section>
-                <Button className="border-teal-600 bg-teal-600">
-                    <span>About</span>
-                </Button>
-                <p className="mt-6">Test</p>
-            </Section>
-            <Section>
-                <p className="text-5xl text-white">Let's get in touch!</p>
-                <div onClick={emailClickHandler} ref={emailRef}>
-                    <Button className="relative mt-6 border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="h-4 w-4"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                            />
-                        </svg>
-                        <span
-                            className={
-                                opacityClipboard +
-                                " " +
-                                "absolute left-9 transition-all"
-                            }
-                        >
-                            Copied to Clipboard!
-                        </span>
-                        <span className={opacityEmail + " " + "transition-all"}>
-                            lukavelic@outlook.com
-                        </span>
+                <PopAnimation>
+                    <Button className="border-blue-600 bg-blue-600">
+                        <span>Projects</span>
                     </Button>
-                </div>
+                    <div className="flex w-full flex-col justify-center">
+                        <MobileCollage
+                            className="mt-6 flex flex-col gap-4"
+                            images={images}
+                        ></MobileCollage>
+                        <Carousel scroll="left" images={images}></Carousel>
+                        <Carousel scroll="right" images={images}></Carousel>
+                    </div>
+                </PopAnimation>
+            </Section>
+            <Section>
+                <PopAnimation>
+                    <Button className="border-teal-600 bg-teal-600">
+                        <span>About</span>
+                    </Button>
+                    <p className="mt-6">Test</p>
+                </PopAnimation>
+            </Section>
+            <Section>
+                <PopAnimation>
+                    <p className="text-5xl text-white">Let's get in touch!</p>
+                    <div onClick={emailClickHandler} ref={emailRef}>
+                        <Button className="relative mt-6 border-red-600 bg-red-600 hover:cursor-pointer hover:bg-transparent">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                className="h-4 w-4"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                                />
+                            </svg>
+                            <span
+                                className={
+                                    opacityClipboard +
+                                    " " +
+                                    "absolute left-9 transition-all"
+                                }
+                            >
+                                Copied to Clipboard!
+                            </span>
+                            <span
+                                className={
+                                    opacityEmail + " " + "transition-all"
+                                }
+                            >
+                                lukavelic@outlook.com
+                            </span>
+                        </Button>
+                    </div>
+                </PopAnimation>
             </Section>
         </Layout>
     );
