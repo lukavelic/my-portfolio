@@ -7,10 +7,11 @@ import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import MobileCollage from "../components/MobileCollage";
 import PopAnimation from "../components/PopAnimation";
-import img1 from "../images/img1.webp";
-import img2 from "../images/img2.webp";
-import img3 from "../images/img3.webp";
-import img4 from "../images/img4.webp";
+import img1 from "../assets/images/img1.webp";
+import img2 from "../assets/images/img2.webp";
+import img3 from "../assets/images/img3.webp";
+import img4 from "../assets/images/img4.webp";
+import profilePhoto from "../assets/images/profile2.webp";
 
 const IndexPage: any = () => {
     const [opacityEmail, setOpacityEmail] = useState("opacity-100");
@@ -64,7 +65,7 @@ const IndexPage: any = () => {
             <PopAnimation>
                 <div className="flex gap-4 pb-8 text-white max-md:flex-col md:items-center md:justify-between">
                     <div className="flex flex-wrap gap-2">
-                        <Button className="">
+                        <Button className="font-semibold">
                             <svg
                                 className="h-4"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +90,7 @@ const IndexPage: any = () => {
                             </svg>
                             <span>HTML</span>
                         </Button>
-                        <Button>
+                        <Button className="font-semibold">
                             <svg
                                 className="h-4 w-4"
                                 viewBox="0 0 60 60"
@@ -114,7 +115,7 @@ const IndexPage: any = () => {
                             </svg>
                             <span>CSS</span>
                         </Button>
-                        <Button>
+                        <Button className="font-semibold">
                             <svg
                                 className="h-4 w-4"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +126,7 @@ const IndexPage: any = () => {
                             </svg>
                             <span>JavaScript</span>
                         </Button>
-                        <Button>
+                        <Button className="font-semibold">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="-11.5 -10.232 23 20.463"
@@ -161,7 +162,7 @@ const IndexPage: any = () => {
             </PopAnimation>
             <Section>
                 <PopAnimation>
-                    <Button className="border-blue-600 bg-blue-600">
+                    <Button className="border-blue-600 bg-blue-600 font-semibold">
                         <span ref={projectsRef}>Projects</span>
                     </Button>
                     <div className="flex w-full flex-col justify-center">
@@ -176,17 +177,127 @@ const IndexPage: any = () => {
             </Section>
             <Section>
                 <PopAnimation>
-                    <Button className="border-teal-600 bg-teal-600">
+                    <Button className="border-teal-600 bg-teal-600 font-semibold">
                         <span ref={aboutRef}>About</span>
                     </Button>
-                    <div></div>
+                    <div className="mt-6 flex w-full justify-center gap-12 text-white max-md:flex-col">
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="h-60 w-60 max-md:h-40 max-md:w-40">
+                                <img
+                                    src={profilePhoto}
+                                    alt="Profile photo"
+                                    className=" rounded-full"
+                                />
+                            </div>
+                            <p className=" text-2xl font-semibold">
+                                Luka Velic
+                            </p>
+                        </div>
+                        <div className="w-1/2 max-md:w-full">
+                            <p className=" flex max-w-[80%] flex-col gap-4 max-md:max-w-full">
+                                <p>
+                                    A self-taught web developer who values
+                                    learning and growing with people, teams, and
+                                    technologies.
+                                </p>
+                                <p>
+                                    Presently, I am on the lookout for a junior
+                                    role in front-end development, while
+                                    building personal projects to learn new
+                                    technologies.
+                                </p>
+                                <p>
+                                    For the past 5 years I have worked on LNG
+                                    carriers, most recently as a 2nd Officer.
+                                </p>
+                            </p>
+                            <Button className="mt-6 border-red-600 bg-red-600 font-semibold transition-all hover:cursor-pointer hover:bg-transparent">
+                                Resume
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    className="h-4 w-4"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M3 17v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2m-4-5-5 5m0 0-4-5m4 5V3"
+                                    />
+                                </svg>
+                            </Button>
+                            <div className="mt-6 flex max-w-[80%] flex-row gap-4">
+                                <Button className="h-fit border-teal-600 bg-teal-600 font-semibold">
+                                    Skills
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="1.5"
+                                        className="h-4 w-4"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="m8 5 8 7-8 8"
+                                        />
+                                    </svg>
+                                </Button>
+                                <div className="flex flex-wrap gap-2">
+                                    <Button className="border-orange-600 bg-orange-600">
+                                        HTML
+                                    </Button>
+                                    <Button className="border-blue-600 bg-blue-600">
+                                        CSS
+                                    </Button>
+                                    <Button className="border-yellow-600 bg-yellow-600">
+                                        JavaScript
+                                    </Button>
+                                    <Button className="border-sky-600 bg-sky-600">
+                                        React
+                                    </Button>
+                                    <Button className="border-blue-600 bg-blue-600">
+                                        TypeScript
+                                    </Button>
+                                    <Button className="border-green-600 bg-green-600">
+                                        Node.js
+                                    </Button>
+                                    <Button className=" border-purple-600 bg-purple-700">
+                                        Gatsby
+                                    </Button>
+                                    <Button className="border-green-600 bg-green-600">
+                                        MongoDB
+                                    </Button>
+                                    <Button className="border-gray-400 bg-gray-400">
+                                        Express.js
+                                    </Button>
+                                    <Button className=" border-blue-800 bg-blue-800">
+                                        TailwindCSS
+                                    </Button>
+                                    <Button className="border-gray-400 bg-gray-400">
+                                        CMS
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </PopAnimation>
             </Section>
             <Section>
                 <PopAnimation>
                     <p className="text-5xl text-white">Let's get in touch!</p>
                     <div onClick={emailClickHandler} ref={contactRef}>
-                        <Button className="relative mt-6 border-red-600 bg-red-600 transition-all hover:cursor-pointer hover:bg-transparent">
+                        <Button className="relative mt-6 border-red-600 bg-red-600 font-semibold transition-all hover:cursor-pointer hover:bg-transparent">
+                            <span
+                                className={
+                                    opacityEmail + " " + "transition-all"
+                                }
+                            >
+                                lukavelic@outlook.com
+                            </span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -205,17 +316,10 @@ const IndexPage: any = () => {
                                 className={
                                     opacityClipboard +
                                     " " +
-                                    "absolute left-9 transition-all"
+                                    "absolute left-4 transition-all"
                                 }
                             >
                                 Copied to Clipboard!
-                            </span>
-                            <span
-                                className={
-                                    opacityEmail + " " + "transition-all"
-                                }
-                            >
-                                lukavelic@outlook.com
                             </span>
                         </Button>
                     </div>
@@ -225,6 +329,6 @@ const IndexPage: any = () => {
     );
 };
 
-export const Head = () => <Seo title="Home Page" />;
+export const Head = () => <Seo title="Home" />;
 
 export default IndexPage;
