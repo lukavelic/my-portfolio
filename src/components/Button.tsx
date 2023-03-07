@@ -2,12 +2,14 @@ import React from "react";
 
 interface IProps {
     className?: string;
+    id?: string;
     children?: any;
 }
 
-function Button({ className, children }: IProps) {
+function Button({ className, id, children }: IProps) {
     return (
         <div
+            id={id}
             className={
                 className +
                 " " +
